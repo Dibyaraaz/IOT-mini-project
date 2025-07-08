@@ -1,0 +1,2151 @@
+[
+    {
+        "id": "4088c921ad23ad9c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fa1242a3b58f60ed",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "986e9c0cdfc31cfe",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c2167b94b5bb8b10",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "influx-config",
+        "type": "influxdb",
+        "hostname": "localhost",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "machine1",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "8aa350c9fd78202b",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "9b9454c39b526be7",
+        "type": "mqtt-broker",
+        "name": "public emqx broker",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "86a0841473646351",
+        "type": "ui_tab",
+        "name": "Machine1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c5b73bcf780ca7fb",
+        "type": "ui_tab",
+        "name": "Machine2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "90219aa996397bfc",
+        "type": "ui_tab",
+        "name": "Machine3",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui_tab_machine",
+        "type": "ui_tab",
+        "name": "Machine4 ",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ui_machine1",
+        "type": "ui_group",
+        "name": "Machine1",
+        "tab": "86a0841473646351",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "36ecd99b40272877",
+        "type": "ui_group",
+        "name": "Machine2",
+        "tab": "c5b73bcf780ca7fb",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fe6e1a254ac0d3ce",
+        "type": "ui_group",
+        "name": "Machine3",
+        "tab": "90219aa996397bfc",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f50dc10253bfa89",
+        "type": "ui_group",
+        "name": "Machine4",
+        "tab": "ui_tab_machine",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "influx_config",
+        "type": "influxdb",
+        "d": true,
+        "hostname": "localhost",
+        "port": "8086",
+        "protocol": "http",
+        "database": "",
+        "name": "Forklift DB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": "",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "bf424682da4f7ce4",
+        "type": "ui_tab",
+        "name": "test",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d66446107330e066",
+        "type": "ui_group",
+        "name": "test",
+        "tab": "bf424682da4f7ce4",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d703d1f7a2546df1",
+        "type": "ui_tab",
+        "name": "Forklift",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8fce5d949f62159b",
+        "type": "ui_group",
+        "name": "Forklift",
+        "tab": "d703d1f7a2546df1",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ed2fef724f7b879d",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "db3c3affa81cc5ae",
+        "type": "ui_tab",
+        "name": "Forklift",
+        "icon": "dashboard",
+        "order": 5
+    },
+    {
+        "id": "9cc4eb14a2bd695c",
+        "type": "ui_group",
+        "name": "Forklift Queue",
+        "tab": "db3c3affa81cc5ae",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "4d19f53a11f74421",
+        "type": "ui_button",
+        "z": "4088c921ad23ad9c",
+        "name": "Request Transport M1",
+        "group": "ui_machine1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Request Transport",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"machine\": \"M1\", \"timestamp\": \"{{timestamp}}\"}",
+        "payloadType": "json",
+        "topic": "machine/1/request",
+        "topicType": "str",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "235ee82b73ec3b52"
+            ]
+        ]
+    },
+    {
+        "id": "235ee82b73ec3b52",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "Base64 Encode",
+        "func": "msg.payload.timestamp = new Date().toISOString();\nconst jsonStr = JSON.stringify(msg.payload);\nmsg.payload = Buffer.from(jsonStr).toString('base64');\nmsg.topic = \"machine/1/request\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "507db51b7a37aa10",
+                "b99dc9d9fc676319",
+                "515dd3dcff0f0b0d"
+            ]
+        ]
+    },
+    {
+        "id": "507db51b7a37aa10",
+        "type": "mqtt out",
+        "z": "4088c921ad23ad9c",
+        "name": "Send Request",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 520,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b99dc9d9fc676319",
+        "type": "debug",
+        "z": "4088c921ad23ad9c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "596393564b76527c",
+        "type": "ui_button",
+        "z": "4088c921ad23ad9c",
+        "name": "Request Transport M2",
+        "group": "36ecd99b40272877",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Request Transport",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"machine\": \"M2\", \"timestamp\": \"{{timestamp}}\"}",
+        "payloadType": "json",
+        "topic": "machine/2/request",
+        "topicType": "str",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "ba85d94ef77c4ac8"
+            ]
+        ]
+    },
+    {
+        "id": "ba85d94ef77c4ac8",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "Base64 Encode",
+        "func": "msg.payload.timestamp = new Date().toISOString();\nconst jsonStr = JSON.stringify(msg.payload);\nmsg.payload = Buffer.from(jsonStr).toString('base64');\nmsg.topic = \"machine/2/request\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "62dfed9aece2f793",
+                "1b9eab9d96308c4b",
+                "a1a9ae69f54a679e"
+            ]
+        ]
+    },
+    {
+        "id": "62dfed9aece2f793",
+        "type": "mqtt out",
+        "z": "4088c921ad23ad9c",
+        "name": "Send Request",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "mqtt_broker",
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1b9eab9d96308c4b",
+        "type": "debug",
+        "z": "4088c921ad23ad9c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "dddef2e485fb3372",
+        "type": "ui_button",
+        "z": "4088c921ad23ad9c",
+        "name": "Request Transport M3",
+        "group": "fe6e1a254ac0d3ce",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Request Transport",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"machine\": \"M3\", \"timestamp\": \"{{timestamp}}\"}",
+        "payloadType": "json",
+        "topic": "machine/3/request",
+        "topicType": "str",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "8a99cdbf9474b963"
+            ]
+        ]
+    },
+    {
+        "id": "8a99cdbf9474b963",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "Base64 Encode",
+        "func": "msg.payload.timestamp = new Date().toISOString();\nconst jsonStr = JSON.stringify(msg.payload);\nmsg.payload = Buffer.from(jsonStr).toString('base64');\nmsg.topic = \"machine/3/request\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "9c5d3bd4c296ab06",
+                "6dd9e85c7b6c6b3f",
+                "ed7a71f5118130b0"
+            ]
+        ]
+    },
+    {
+        "id": "9c5d3bd4c296ab06",
+        "type": "mqtt out",
+        "z": "4088c921ad23ad9c",
+        "name": "Send Request",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "mqtt_broker",
+        "x": 520,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6dd9e85c7b6c6b3f",
+        "type": "debug",
+        "z": "4088c921ad23ad9c",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2b64f024654e67ce",
+        "type": "ui_button",
+        "z": "4088c921ad23ad9c",
+        "name": "Request Transport M4",
+        "group": "7f50dc10253bfa89",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Request Transport",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"machine\": \"M4\", \"timestamp\": \"{{timestamp}}\"}",
+        "payloadType": "json",
+        "topic": "machine/4/request",
+        "topicType": "str",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "315e93cad839a6b7"
+            ]
+        ]
+    },
+    {
+        "id": "315e93cad839a6b7",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "Base64 Encode",
+        "func": "msg.payload.timestamp = new Date().toISOString();\nconst jsonStr = JSON.stringify(msg.payload);\nmsg.payload = Buffer.from(jsonStr).toString('base64');\nmsg.topic = \"machine/4/request\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "88de073daef95591",
+                "3104f5ff2ce2c8b0",
+                "eebe806a2376ee8b"
+            ]
+        ]
+    },
+    {
+        "id": "88de073daef95591",
+        "type": "mqtt out",
+        "z": "4088c921ad23ad9c",
+        "name": "Send Request",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 520,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3104f5ff2ce2c8b0",
+        "type": "debug",
+        "z": "4088c921ad23ad9c",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "515dd3dcff0f0b0d",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "function 1",
+        "func": "msg.payload = [\n    {\n        measurement: \"machine_requests1\",\n        tags: {\n            machine: msg.payload.machine\n        },\n        fields: {\n            timestamp: msg.payload.timestamp\n        },\n        timestamp: new Date()  // or new Date(msg.payload.timestamp) if you want to use the request timestamp\n    }\n];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "854d9080b9a5a9a8"
+            ]
+        ]
+    },
+    {
+        "id": "854d9080b9a5a9a8",
+        "type": "influxdb out",
+        "z": "4088c921ad23ad9c",
+        "influxdb": "influx-config",
+        "name": "",
+        "measurement": "machine_requests1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ipb",
+        "bucket": "Machine1",
+        "x": 810,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a1a9ae69f54a679e",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "function 2",
+        "func": "msg.payload = [\n    {\n        measurement: \"machine_requests2\",\n        tags: {\n            machine: msg.payload.machine\n        },\n        fields: {\n            timestamp: msg.payload.timestamp\n        },\n        timestamp: new Date()  // or new Date(msg.payload.timestamp) if you want to use the request timestamp\n    }\n];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "e65c1819d5eeb62f"
+            ]
+        ]
+    },
+    {
+        "id": "ed7a71f5118130b0",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "function 3",
+        "func": "msg.payload = [\n    {\n        measurement: \"machine_requests3\",\n        tags: {\n            machine: msg.payload.machine\n        },\n        fields: {\n            timestamp: msg.payload.timestamp\n        },\n        timestamp: new Date()  // or new Date(msg.payload.timestamp) if you want to use the request timestamp\n    }\n];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "05deea22ff2435bc"
+            ]
+        ]
+    },
+    {
+        "id": "eebe806a2376ee8b",
+        "type": "function",
+        "z": "4088c921ad23ad9c",
+        "name": "function 4",
+        "func": "msg.payload = [\n    {\n        measurement: \"machine_requests4\",\n        tags: {\n            machine: msg.payload.machine\n        },\n        fields: {\n            timestamp: msg.payload.timestamp\n        },\n        timestamp: new Date()  // or new Date(msg.payload.timestamp) if you want to use the request timestamp\n    }\n];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 320,
+        "wires": [
+            [
+                "51cd57756acbb0f4"
+            ]
+        ]
+    },
+    {
+        "id": "e65c1819d5eeb62f",
+        "type": "influxdb out",
+        "z": "4088c921ad23ad9c",
+        "influxdb": "influx-config",
+        "name": "",
+        "measurement": "machine_requests2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ipb",
+        "bucket": "Machine2",
+        "x": 910,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "05deea22ff2435bc",
+        "type": "influxdb out",
+        "z": "4088c921ad23ad9c",
+        "influxdb": "influx-config",
+        "name": "",
+        "measurement": "machine_requests3",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ipb",
+        "bucket": "Machine3",
+        "x": 950,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "51cd57756acbb0f4",
+        "type": "influxdb out",
+        "z": "4088c921ad23ad9c",
+        "influxdb": "influx-config",
+        "name": "",
+        "measurement": "machine_requests4",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ipb",
+        "bucket": "Machine4",
+        "x": 970,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8243152486186361",
+        "type": "mqtt in",
+        "z": "fa1242a3b58f60ed",
+        "name": "Receive Requests",
+        "topic": "machine/+/request",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "bd7e13a52242a164",
+                "0f746448298fd98a"
+            ]
+        ]
+    },
+    {
+        "id": "bd7e13a52242a164",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "Base64 Decode",
+        "func": "const raw = Buffer.from(msg.payload, 'base64').toString('utf-8');\nconst obj = JSON.parse(raw);\n\nobj.rawTimestamp = obj.timestamp;\n\nconst date = new Date(obj.timestamp);\nobj.timestamp = date.toLocaleString();\n\nmsg.payload = obj;\n\n// Save request data for later\nflow.set(\"current_request\", {\n    machine: obj.machine,\n    timestamp: obj.rawTimestamp\n});\n\n// Prepare readable message for audio\nmsg.audio = `${obj.machine} has requested transport at ${date.toLocaleTimeString()}`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "cbec6f695679d9a2",
+                "6e1fb73f322c52b3",
+                "0414755ceb43ab22"
+            ]
+        ]
+    },
+    {
+        "id": "cbec6f695679d9a2",
+        "type": "ui_text",
+        "z": "fa1242a3b58f60ed",
+        "group": "9cc4eb14a2bd695c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Queue Display",
+        "label": "Request Queue",
+        "format": "{{msg.payload.machine}} requested at {{msg.payload.timestamp}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7b100263012ecace",
+        "type": "ui_audio",
+        "z": "fa1242a3b58f60ed",
+        "name": "New Request Audio",
+        "group": "9cc4eb14a2bd695c",
+        "voice": "en-US",
+        "always": true,
+        "x": 700,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6e1fb73f322c52b3",
+        "type": "debug",
+        "z": "fa1242a3b58f60ed",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0f746448298fd98a",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "fifo",
+        "func": "let queue = flow.get('request_queue') || [];\nconst raw = Buffer.from(msg.payload, 'base64').toString('utf-8');\nconst obj = JSON.parse(raw);\nqueue.push({ machine: obj.machine, timestamp: obj.timestamp });\nflow.set('request_queue', queue);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd9eb8035719c043",
+        "type": "http in",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "url": "/forklift",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "a41baa068042a142"
+            ]
+        ]
+    },
+    {
+        "id": "f12d602a3f687483",
+        "type": "http response",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d83a1bc7b63d2408",
+        "type": "http in",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "url": "/forklift/api",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "312fba6040fbf090"
+            ]
+        ]
+    },
+    {
+        "id": "312fba6040fbf090",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 6",
+        "func": "let requestQueue = flow.get('request_queue') || [];\nlet pendingQueue = flow.get('pending_queue') || [];\n\n// Add status to each item to indicate state for frontend\nlet combinedQueue = [];\n\n// Requests waiting to be accepted/rejected\ncombinedQueue = combinedQueue.concat(\n    requestQueue.map(item => ({ ...item, status: 'pending' }))\n);\n\n// Requests accepted, waiting to be completed\ncombinedQueue = combinedQueue.concat(\n    pendingQueue.map(item => ({ ...item, status: 'accepted' }))\n);\n\nmsg.payload = combinedQueue;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "f742953d22e30304"
+            ]
+        ]
+    },
+    {
+        "id": "f742953d22e30304",
+        "type": "http response",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a41baa068042a142",
+        "type": "template",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Forklift Request Queue</title>\n  <style>\n    body {\n      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n      background-color: #f0f4f8;\n      padding: 30px;\n      color: #333;\n    }\n\n    h1 {\n      color: #2c3e50;\n      text-align: center;\n      margin-bottom: 30px;\n    }\n\n    #queue {\n      max-width: 700px;\n      margin: 0 auto;\n    }\n\n    .entry {\n      background: #fff;\n      border-left: 6px solid #3498db;\n      padding: 15px 20px;\n      margin-bottom: 12px;\n      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);\n      border-radius: 8px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .info {\n      flex-grow: 1;\n      font-size: 16px;\n    }\n\n    .info strong {\n      color: #2c3e50;\n    }\n\n    .buttons {\n      margin-left: 15px;\n      display: flex;\n      gap: 10px;\n    }\n\n    button {\n      cursor: pointer;\n      border: none;\n      border-radius: 5px;\n      padding: 8px 12px;\n      font-size: 14px;\n      color: white;\n    }\n\n    button.accept {\n      background-color: #27ae60;\n    }\n\n    button.reject {\n      background-color: #e74c3c;\n    }\n\n    button.complete {\n      background-color: #2980b9;\n    }\n  </style>\n</head>\n\n<body>\n\n  <h1>Forklift Request Queue (FIFO)</h1>\n  <div id=\"queue\"></div>\n\n  <script>\n    async function loadQueue() {\n      try {\n        const res = await fetch(\"/forklift/api\");\n        const data = await res.json();\n\n        const queueDiv = document.getElementById(\"queue\");\n        if (!Array.isArray(data) || data.length === 0) {\n          queueDiv.innerHTML = \"<p>No requests in the queue.</p>\";\n          return;\n        }\n\n        queueDiv.innerHTML = data.map(item => {\n          // Determine buttons based on status\n          let buttonsHtml = '';\n          if (item.status === 'pending') {\n            buttonsHtml = `\n              <button class=\"accept\">Accept</button>\n              <button class=\"reject\">Reject</button>\n            `;\n          } else if (item.status === 'accepted') {\n            buttonsHtml = `<button class=\"complete\">Complete</button>`;\n          }\n\n          return `\n            <div class=\"entry\" data-machine=\"${item.machine}\" data-timestamp=\"${item.timestamp || item.requested_time}\">\n              <div class=\"info\">\n                <strong>Machine:</strong> ${item.machine} <br/>\n                <strong>Requested at:</strong> ${item.timestamp || item.requested_time}\n              </div>\n              <div class=\"buttons\">\n                ${buttonsHtml}\n              </div>\n            </div>\n          `;\n        }).join('');\n\n        // Attach event listeners after rendering\n        document.querySelectorAll(\"#queue .entry\").forEach(entry => {\n          const machine = entry.getAttribute(\"data-machine\");\n          const requestedTime = entry.getAttribute(\"data-timestamp\");\n\n          const acceptBtn = entry.querySelector(\"button.accept\");\n          const rejectBtn = entry.querySelector(\"button.reject\");\n          const completeBtn = entry.querySelector(\"button.complete\");\n\n          if (acceptBtn) acceptBtn.onclick = () => acceptRequest(machine, requestedTime);\n          if (rejectBtn) rejectBtn.onclick = () => rejectRequest(machine, requestedTime);\n          if (completeBtn) completeBtn.onclick = () => completeRequest(machine, requestedTime);\n        });\n      } catch (e) {\n        console.error(\"Failed to load queue:\", e);\n      }\n    }\n\n    async function acceptRequest(machine, requestedTime) {\n      const requested = new Date(requestedTime);\n      if (isNaN(requested.getTime())) {\n        alert(\"Invalid requested time\");\n        return;\n      }\n\n      const handledTime = new Date();\n      const durationSec = (handledTime - requested) / 1000;\n\n      try {\n        const res = await fetch(\"/forklift/accept\", {\n          method: \"POST\",\n          headers: { \"Content-Type\": \"application/json\" },\n          body: JSON.stringify({\n            machine,\n            status: \"accepted\",\n            requested_time: requested.toISOString(),\n            handled_time: handledTime.toISOString(),\n            duration: durationSec\n          })\n        });\n\n        if (res.ok) {\n          await loadQueue();\n        } else {\n          alert(\"Failed to accept request.\");\n        }\n      } catch (e) {\n        alert(\"Error accepting request.\");\n        console.error(e);\n      }\n    }\n\n    async function rejectRequest(machine, requestedTime) {\n      if (!confirm(`Reject request from machine \"${machine}\"?`)) return;\n\n      const requested = new Date(requestedTime);\n      if (isNaN(requested.getTime())) {\n        alert(\"Invalid requested time\");\n        return;\n      }\n\n      const handledTime = new Date();\n      const durationSec = (handledTime - requested) / 1000;\n\n      try {\n        const res = await fetch(\"/forklift/reject\", {\n          method: \"POST\",\n          headers: { \"Content-Type\": \"application/json\" },\n          body: JSON.stringify({\n            machine,\n            status: \"rejected\",\n            requested_time: requested.toISOString(),\n            handled_time: handledTime.toISOString(),\n            duration: durationSec\n          })\n        });\n\n        if (res.ok) {\n          await loadQueue();\n        } else {\n          alert(\"Failed to reject request.\");\n        }\n      } catch (e) {\n        alert(\"Error rejecting request.\");\n        console.error(e);\n      }\n    }\n\n    async function completeRequest(machine, requestedTime) {\n      if (!confirm(`Complete request from machine \"${machine}\"? This will remove it from the queue.`)) return;\n\n      try {\n        const res = await fetch(\"/forklift/complete\", {\n          method: \"POST\",\n          headers: { \"Content-Type\": \"application/json\" },\n          body: JSON.stringify({\n            machine,\n            requestTime: requestedTime\n          })\n        });\n\n        if (res.ok) {\n          await loadQueue();\n        } else {\n          alert(\"Failed to complete request.\");\n        }\n      } catch (e) {\n        alert(\"Error completing request.\");\n        console.error(e);\n      }\n    }\n\n    setInterval(loadQueue, 2000);\n    loadQueue();\n  </script>\n\n</body>\n\n</html>",
+        "output": "str",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "f12d602a3f687483"
+            ]
+        ]
+    },
+    {
+        "id": "cf4bf6d79628abb9",
+        "type": "http in",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "url": "/forklift/request",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 400,
+        "wires": [
+            [
+                "8360d76feeb2ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "8360d76feeb2ed9a",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 7",
+        "func": "let queue = flow.get('request_queue') || [];\nconst { machine, requested_time } = msg.payload;\n\nif (!machine) {\n    msg.statusCode = 400;\n    msg.payload = { error: \"Missing machine field\" };\n    return msg;\n}\n\nconst timestamp = requested_time || new Date().toISOString();\n\nqueue.push({\n    machine,\n    timestamp\n});\n\nflow.set('request_queue', queue);\n\nmsg.statusCode = 200;\nmsg.payload = { success: true, machine, timestamp };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "d609fbab068e8ad6",
+                "2e1e56b6108a5a4e"
+            ]
+        ]
+    },
+    {
+        "id": "d609fbab068e8ad6",
+        "type": "http response",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "98fe69eac64c7678",
+        "type": "http in",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "url": "/forklift/reject",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "0aad585d9851d3df"
+            ]
+        ]
+    },
+    {
+        "id": "0aad585d9851d3df",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 8",
+        "func": "let queue = flow.get('request_queue') || [];\nconst { machine } = msg.payload;\n\nif (!machine) {\n    msg.statusCode = 400;\n    msg.payload = { error: \"Missing machine field\" };\n    return msg;\n}\n\n// Remove the rejected machine from the queue\nqueue = queue.filter(item => item.machine !== machine);\n\nflow.set('request_queue', queue);\n\nmsg.statusCode = 200;\nmsg.payload = { Result: 'Reject', machine };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "4668c13f37940985",
+                "ac144803008a3b65"
+            ]
+        ]
+    },
+    {
+        "id": "4668c13f37940985",
+        "type": "http response",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 560,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ac144803008a3b65",
+        "type": "debug",
+        "z": "fa1242a3b58f60ed",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2e1e56b6108a5a4e",
+        "type": "debug",
+        "z": "fa1242a3b58f60ed",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "249e145842b248cb",
+        "type": "http in",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "url": "/forklift/accept",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 700,
+        "wires": [
+            [
+                "59c42eee933b1079"
+            ]
+        ]
+    },
+    {
+        "id": "59c42eee933b1079",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 9",
+        "func": "let queue = flow.get('request_queue') || [];\nlet pending = flow.get('pending_queue') || [];\nconst { machine } = msg.payload;\n\nif (!machine) {\n    msg.statusCode = 400;\n    msg.payload = { error: \"Missing machine field\" };\n    return msg;\n}\n\nconst acceptedMachine = queue.find(item => item.machine === machine);\nif (!acceptedMachine) {\n    msg.statusCode = 404;\n    msg.payload = { error: \"Machine not found in queue\" };\n    return msg;\n}\n\n// Remove from request queue\nqueue = queue.filter(item => item.machine !== machine);\nflow.set('request_queue', queue);\n\n// Save to pending queue\npending.push({\n    machine: acceptedMachine.machine,\n    requested_time: acceptedMachine.timestamp,\n    accepted_time: new Date().toISOString()\n});\nflow.set('pending_queue', pending);\n\nmsg.statusCode = 200;\nmsg.payload = { Result: 'Accept', machine };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 700,
+        "wires": [
+            [
+                "276d19f1c8ae08ce",
+                "cad57e4a119cc9a3"
+            ]
+        ]
+    },
+    {
+        "id": "00d91b5eb329e0d7",
+        "type": "influxdb out",
+        "z": "fa1242a3b58f60ed",
+        "influxdb": "influx-config",
+        "name": "",
+        "measurement": "acceptedMach",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ipb",
+        "bucket": "forklift",
+        "x": 710,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "276d19f1c8ae08ce",
+        "type": "http response",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "cad57e4a119cc9a3",
+        "type": "debug",
+        "z": "fa1242a3b58f60ed",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "0bb6d9f1609b50f0",
+        "type": "http in",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "url": "/forklift/complete",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 900,
+        "wires": [
+            [
+                "4cd27863aaf4dd1f"
+            ]
+        ]
+    },
+    {
+        "id": "4cd27863aaf4dd1f",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 17",
+        "func": "let pending = flow.get('pending_queue') || [];\n\nconst machine = msg.payload.machine;\nconst requestTimeStr = msg.payload.requestTime;\nconst requestTime = new Date(requestTimeStr);\n\nif (!machine || isNaN(requestTime.getTime())) {\n    node.error(\"Invalid data for completing request\");\n    return null;\n}\n\nconst index = pending.findIndex(item => item.machine === machine && item.requested_time === requestTimeStr);\nif (index === -1) {\n    node.warn(\"Machine not found in pending queue\");\n    return null;\n}\n\npending.splice(index, 1); // Remove from pending queue\nflow.set('pending_queue', pending);\n\nconst completeTime = new Date();\nconst duration = completeTime.getTime() - requestTime.getTime();\n\n// Helper function to format date as 'YYYY-MM-DD HH:mm:ss'\nfunction formatDate(date) {\n    const pad = n => n.toString().padStart(2, '0');\n    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ` +\n        `${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;\n}\n\n// ✅ Send data in correct format for InfluxDB v2\nmsg.measurement = \"acceptedMach\";\nmsg.tags = {\n    machine: machine.toString()\n};\nmsg.payload = {\n    duration: duration,                          // numeric (ms)\n    machine: machine,                            // included again if needed for queries\n    requestTime: formatDate(requestTime),        // readable\n    completeTime: formatDate(completeTime)       // readable\n};\n\n// Optional: include timestamp if needed\n// msg.timestamp = completeTime;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 900,
+        "wires": [
+            [
+                "a38d30a5cf4c0eb9",
+                "180fca0ae847dd51",
+                "00d91b5eb329e0d7"
+            ]
+        ]
+    },
+    {
+        "id": "a38d30a5cf4c0eb9",
+        "type": "http response",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "180fca0ae847dd51",
+        "type": "debug",
+        "z": "fa1242a3b58f60ed",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "93d9941c48450543",
+        "type": "inject",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1160,
+        "wires": [
+            [
+                "eb7e191cae45e6e3"
+            ]
+        ]
+    },
+    {
+        "id": "eb7e191cae45e6e3",
+        "type": "influxdb in",
+        "z": "fa1242a3b58f60ed",
+        "influxdb": "influx-config",
+        "name": "",
+        "query": "from(bucket: \"forklift\")\n  |> range(start: -1d)  // or use a shorter time window like -1d, depending on your need\n  |> filter(fn: (r) => r._measurement == \"acceptedMach\")\n  |> filter(fn: (r) => r._field == \"duration\" or r._field == \"machine\")\n  |> pivot(rowKey:[\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "ipb",
+        "x": 340,
+        "y": 1100,
+        "wires": [
+            [
+                "919c63b4f493922d"
+            ]
+        ]
+    },
+    {
+        "id": "919c63b4f493922d",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 16",
+        "func": "let data = msg.payload;\n\nif (!Array.isArray(data) || data.length === 0) {\n    node.warn(\"No duration data found.\");\n    return null;\n}\n\nlet total = 0;\nlet min = data[0];\nlet max = data[0];\n\ndata.forEach(item => {\n    // Convert ms to seconds with 2 decimals\n    item.duration_sec = +(Number(item.duration) / 1000).toFixed(2);\n    total += item.duration_sec;\n\n    if (item.duration_sec < Number(min.duration) / 1000) min = item;\n    if (item.duration_sec > Number(max.duration) / 1000) max = item;\n});\n\nconst avg = +(total / data.length).toFixed(2);\n\n// Prepare labels and values in seconds\nconst labels = data.map(item => item.machine);\nconst values = data.map(item => item.duration_sec);\n\nmsg.payload = {\n    average_sec: avg,  // number in seconds\n    chart: {\n        labels: labels,\n        values: values\n    },\n    shortest: `${(Number(min.duration) / 1000).toFixed(2)} s (Machine: ${min.machine})`,\n    longest: `${(Number(max.duration) / 1000).toFixed(2)} s (Machine: ${max.machine})`\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1200,
+        "wires": [
+            [
+                "76723af1d56d3f43",
+                "a7dbc13599f2eecf",
+                "60c4b809cd07bcb1",
+                "5fa83e32ab5bbfd4",
+                "c7c2e1ff0ebb9e2d"
+            ]
+        ]
+    },
+    {
+        "id": "76723af1d56d3f43",
+        "type": "debug",
+        "z": "fa1242a3b58f60ed",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "93a0c1375d3be9f9",
+        "type": "ui_gauge",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "group": "9cc4eb14a2bd695c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Average Transport Time",
+        "label": "sec",
+        "format": "{{value}} s",
+        "min": 0,
+        "max": "10000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "a7dbc13599f2eecf",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 18",
+        "func": "msg.payload = msg.payload.average_sec;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1260,
+        "wires": [
+            [
+                "93a0c1375d3be9f9"
+            ]
+        ]
+    },
+    {
+        "id": "60c4b809cd07bcb1",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 19",
+        "func": "const labels = msg.payload.chart.labels;\nconst values = msg.payload.chart.values;\n\nmsg.payload = [\n    {\n        series: [\"Duration\"],\n        data: [values],\n        labels: labels\n    }\n];\nmsg.topic = \"Transport Duration per Machine\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1340,
+        "wires": [
+            [
+                "41e88d9992614d51"
+            ]
+        ]
+    },
+    {
+        "id": "41e88d9992614d51",
+        "type": "ui_chart",
+        "z": "fa1242a3b58f60ed",
+        "name": "",
+        "group": "9cc4eb14a2bd695c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5fa83e32ab5bbfd4",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 20",
+        "func": "msg.payload = msg.payload.shortest;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1400,
+        "wires": [
+            [
+                "bff28f57d8991e63"
+            ]
+        ]
+    },
+    {
+        "id": "c7c2e1ff0ebb9e2d",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 21",
+        "func": "msg.payload = msg.payload.longest;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1460,
+        "wires": [
+            [
+                "5d423767cf7c50dc"
+            ]
+        ]
+    },
+    {
+        "id": "bff28f57d8991e63",
+        "type": "ui_text",
+        "z": "fa1242a3b58f60ed",
+        "group": "9cc4eb14a2bd695c",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "\"Shortest Transport Time\"",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 730,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "5d423767cf7c50dc",
+        "type": "ui_text",
+        "z": "fa1242a3b58f60ed",
+        "group": "9cc4eb14a2bd695c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "\"Longest Transport Time\"",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 670,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "0414755ceb43ab22",
+        "type": "function",
+        "z": "fa1242a3b58f60ed",
+        "name": "function 5",
+        "func": "msg.payload = msg.audio;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "7b100263012ecace"
+            ]
+        ]
+    },
+    {
+        "id": "8117591ebce15ef1",
+        "type": "http in",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "url": "/stats",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "a08d0d3fa6199912"
+            ]
+        ]
+    },
+    {
+        "id": "c6b4f014a96889b3",
+        "type": "template",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\" />\n    <title>Machine Duration Stats</title>\n    <link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap\" rel=\"stylesheet\" />\n    <style>\n        body {\n            font-family: 'Poppins', sans-serif;\n            margin: 0;\n            padding: 20px;\n            background: linear-gradient(135deg, #e0f7fa, #e1bee7);\n            min-height: 100vh;\n        }\n\n        h1 {\n            text-align: center;\n            margin-bottom: 30px;\n            color: #333;\n        }\n\n        .container {\n            display: flex;\n            gap: 20px;\n            flex-wrap: wrap;\n            justify-content: center;\n        }\n\n        .machine-box {\n            background: rgba(255, 255, 255, 0.9);\n            backdrop-filter: blur(5px);\n            border-radius: 15px;\n            padding: 20px;\n            width: 230px;\n            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n        }\n\n        .machine-box:hover {\n            transform: translateY(-5px);\n            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);\n        }\n\n        .machine-box h2 {\n            text-align: center;\n            margin: 0;\n            margin-bottom: 15px;\n            font-size: 1.4em;\n            color: #4a148c;\n        }\n\n        .stat {\n            font-size: 1.1em;\n            margin: 10px 0;\n            color: #333;\n        }\n\n        .label {\n            font-weight: 600;\n            color: #00695c;\n        }\n\n        .value {\n            font-weight: 500;\n        }\n    </style>\n</head>\n\n<body>\n    <h1>Machine Duration Statistics (Last 24 Hours)</h1>\n\n    <div class=\"container\">\n        <div class=\"machine-box\" id=\"M1\">\n            <h2>Machine M1</h2>\n            <div class=\"stat\"><span class=\"label\">Average Time:</span> <span class=\"value avg-time\">--</span> s</div>\n            <div class=\"stat\"><span class=\"label\">Standard Deviation:</span> <span class=\"value std-dev\">--</span> s\n            </div>\n        </div>\n        <div class=\"machine-box\" id=\"M2\">\n            <h2>Machine M2</h2>\n            <div class=\"stat\"><span class=\"label\">Average Time:</span> <span class=\"value avg-time\">--</span> s</div>\n            <div class=\"stat\"><span class=\"label\">Standard Deviation:</span> <span class=\"value std-dev\">--</span> s\n            </div>\n        </div>\n        <div class=\"machine-box\" id=\"M3\">\n            <h2>Machine M3</h2>\n            <div class=\"stat\"><span class=\"label\">Average Time:</span> <span class=\"value avg-time\">--</span> s</div>\n            <div class=\"stat\"><span class=\"label\">Standard Deviation:</span> <span class=\"value std-dev\">--</span> s\n            </div>\n        </div>\n        <div class=\"machine-box\" id=\"M4\">\n            <h2>Machine M4</h2>\n            <div class=\"stat\"><span class=\"label\">Average Time:</span> <span class=\"value avg-time\">--</span> s</div>\n            <div class=\"stat\"><span class=\"label\">Standard Deviation:</span> <span class=\"value std-dev\">--</span> s\n            </div>\n        </div>\n    </div>\n\n    <script>\n        // Injected from Node-RED template\n        const stats = {{{payloadAsJson}}} || {};\n\n        window.onload = () => {\n            ['M1', 'M2', 'M3', 'M4'].forEach(machine => {\n                const box = document.getElementById(machine);\n                if (box && stats[machine]) {\n                    box.querySelector('.avg-time').textContent = stats[machine].average;\n                    box.querySelector('.std-dev').textContent = stats[machine].stddev;\n                }\n            });\n        };\n    </script>\n</body>\n\n</html>",
+        "output": "str",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "43ac7989a1ad7732"
+            ]
+        ]
+    },
+    {
+        "id": "43ac7989a1ad7732",
+        "type": "http response",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "fdf1cf8a0949b5b0",
+        "type": "function",
+        "z": "986e9c0cdfc31cfe",
+        "name": "function 19",
+        "func": "// msg.payload: array of InfluxDB points [{machine: \"M1\", _value: 146447}, ...]\n\n// Prepare machine buckets\nlet machines = { M1: [], M2: [], M3: [], M4: [] };\n\nmsg.payload.forEach(point => {\n    let machine = point.machine || (point.tags && point.tags.machine);\n    let duration = point._value || point.duration;\n\n    if (machines[machine]) {\n        machines[machine].push(duration);\n    }\n});\n\nfunction average(arr) {\n    if (arr.length === 0) return 0;\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nfunction stdDev(arr) {\n    if (arr.length === 0) return 0;\n    let avg = average(arr);\n    let squareDiffs = arr.map(value => (value - avg) ** 2);\n    let avgSquareDiff = average(squareDiffs);\n    return Math.sqrt(avgSquareDiff);\n}\n\n// Build stats object with values in seconds (ms / 1000), fixed to 2 decimals\nlet stats = {};\nfor (let m in machines) {\n    stats[m] = {\n        average: (average(machines[m]) / 1000).toFixed(2),\n        stddev: (stdDev(machines[m]) / 1000).toFixed(2)\n    };\n}\n\nmsg.payload = stats;\n// Stringify for injecting in template safely\nmsg.payloadAsJson = JSON.stringify(stats);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [
+                "c6b4f014a96889b3"
+            ]
+        ]
+    },
+    {
+        "id": "a08d0d3fa6199912",
+        "type": "influxdb in",
+        "z": "986e9c0cdfc31cfe",
+        "influxdb": "influx-config",
+        "name": "",
+        "query": "from(bucket: \"forklift\")\n  |> range(start: -1d)  // or use a shorter time window like -1d, depending on your need\n  |> filter(fn: (r) => r._measurement == \"acceptedMach\")\n  |> filter(fn: (r) => r._field == \"duration\" or r._field == \"machine\")\n  |> pivot(rowKey:[\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "ipb",
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [
+                "fdf1cf8a0949b5b0"
+            ]
+        ]
+    },
+    {
+        "id": "336020404e87bc0e",
+        "type": "function",
+        "z": "986e9c0cdfc31cfe",
+        "name": "M1",
+        "func": "// msg.payload: array of InfluxDB points like [{machine: \"M1\", _value: 146447}, ...]\n\nlet m1Durations = [];\n\nmsg.payload.forEach(point => {\n    const machine = point.machine || (point.tags && point.tags.machine);\n    const duration = point._value || point.duration;\n\n    if (machine === \"M1\" && typeof duration === 'number') {\n        m1Durations.push(duration);\n    }\n});\n\nfunction average(arr) {\n    if (arr.length === 0) return 0;\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nfunction stdDev(arr) {\n    if (arr.length === 0) return 0;\n    const avg = average(arr);\n    const squareDiffs = arr.map(value => Math.pow(value - avg, 2));\n    const avgSquareDiff = average(squareDiffs);\n    return Math.sqrt(avgSquareDiff);\n}\n\n// Calculate average and stddev in seconds\nconst avgSec = (average(m1Durations) / 1000).toFixed(2);\nconst stdDevSec = (stdDev(m1Durations) / 1000).toFixed(2);\n\n// Output formatted string\nmsg.payload = `Avg: ${avgSec} s, StdDev: ${stdDevSec} s`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "a7f7342256e8a369",
+                "bb5812a198e2ff9f"
+            ]
+        ]
+    },
+    {
+        "id": "a7f7342256e8a369",
+        "type": "ui_text",
+        "z": "986e9c0cdfc31cfe",
+        "group": "ui_machine1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "475f8bb9678bd3bf",
+        "type": "influxdb in",
+        "z": "986e9c0cdfc31cfe",
+        "influxdb": "influx-config",
+        "name": "",
+        "query": "from(bucket: \"forklift\")\n  |> range(start: -1d)  // or use a shorter time window like -1d, depending on your need\n  |> filter(fn: (r) => r._measurement == \"acceptedMach\")\n  |> filter(fn: (r) => r._field == \"duration\" or r._field == \"machine\")\n  |> pivot(rowKey:[\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "ipb",
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "336020404e87bc0e"
+            ]
+        ]
+    },
+    {
+        "id": "e49490d3b8bde3ec",
+        "type": "inject",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            [
+                "475f8bb9678bd3bf"
+            ]
+        ]
+    },
+    {
+        "id": "bb5812a198e2ff9f",
+        "type": "debug",
+        "z": "986e9c0cdfc31cfe",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4574a3ad8fefd8f9",
+        "type": "function",
+        "z": "986e9c0cdfc31cfe",
+        "name": "M2",
+        "func": "// msg.payload: array of InfluxDB points like [{machine: \"M1\", _value: 146447}, ...]\n\nlet m1Durations = [];\n\nmsg.payload.forEach(point => {\n    const machine = point.machine || (point.tags && point.tags.machine);\n    const duration = point._value || point.duration;\n\n    if (machine === \"M2\" && typeof duration === 'number') {\n        m1Durations.push(duration);\n    }\n});\n\nfunction average(arr) {\n    if (arr.length === 0) return 0;\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nfunction stdDev(arr) {\n    if (arr.length === 0) return 0;\n    const avg = average(arr);\n    const squareDiffs = arr.map(value => Math.pow(value - avg, 2));\n    const avgSquareDiff = average(squareDiffs);\n    return Math.sqrt(avgSquareDiff);\n}\n\n// Calculate average and stddev in seconds\nconst avgSec = (average(m1Durations) / 1000).toFixed(2);\nconst stdDevSec = (stdDev(m1Durations) / 1000).toFixed(2);\n\n// Output formatted string\nmsg.payload = `Avg: ${avgSec} s, StdDev: ${stdDevSec} s`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "661a9893326afcaf",
+                "fcdc7e3e3575545e"
+            ]
+        ]
+    },
+    {
+        "id": "661a9893326afcaf",
+        "type": "ui_text",
+        "z": "986e9c0cdfc31cfe",
+        "group": "36ecd99b40272877",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 670,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5c5414217a3920a2",
+        "type": "influxdb in",
+        "z": "986e9c0cdfc31cfe",
+        "influxdb": "influx-config",
+        "name": "",
+        "query": "from(bucket: \"forklift\")\n  |> range(start: -1d)  // or use a shorter time window like -1d, depending on your need\n  |> filter(fn: (r) => r._measurement == \"acceptedMach\")\n  |> filter(fn: (r) => r._field == \"duration\" or r._field == \"machine\")\n  |> pivot(rowKey:[\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "ipb",
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "4574a3ad8fefd8f9"
+            ]
+        ]
+    },
+    {
+        "id": "a20caed760ddad41",
+        "type": "inject",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "5c5414217a3920a2"
+            ]
+        ]
+    },
+    {
+        "id": "fcdc7e3e3575545e",
+        "type": "debug",
+        "z": "986e9c0cdfc31cfe",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4ff9f9f7e1f0896a",
+        "type": "function",
+        "z": "986e9c0cdfc31cfe",
+        "name": "M3",
+        "func": "// msg.payload: array of InfluxDB points like [{machine: \"M1\", _value: 146447}, ...]\n\nlet m1Durations = [];\n\nmsg.payload.forEach(point => {\n    const machine = point.machine || (point.tags && point.tags.machine);\n    const duration = point._value || point.duration;\n\n    if (machine === \"M3\" && typeof duration === 'number') {\n        m1Durations.push(duration);\n    }\n});\n\nfunction average(arr) {\n    if (arr.length === 0) return 0;\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nfunction stdDev(arr) {\n    if (arr.length === 0) return 0;\n    const avg = average(arr);\n    const squareDiffs = arr.map(value => Math.pow(value - avg, 2));\n    const avgSquareDiff = average(squareDiffs);\n    return Math.sqrt(avgSquareDiff);\n}\n\n// Calculate average and stddev in seconds\nconst avgSec = (average(m1Durations) / 1000).toFixed(2);\nconst stdDevSec = (stdDev(m1Durations) / 1000).toFixed(2);\n\n// Output formatted string\nmsg.payload = `Avg: ${avgSec} s, StdDev: ${stdDevSec} s`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 540,
+        "wires": [
+            [
+                "7aefe9eb2487c940",
+                "ec854cdc2b3c7d25"
+            ]
+        ]
+    },
+    {
+        "id": "7aefe9eb2487c940",
+        "type": "ui_text",
+        "z": "986e9c0cdfc31cfe",
+        "group": "fe6e1a254ac0d3ce",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 730,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "37e13652f23a8f44",
+        "type": "influxdb in",
+        "z": "986e9c0cdfc31cfe",
+        "influxdb": "influx-config",
+        "name": "",
+        "query": "from(bucket: \"forklift\")\n  |> range(start: -1d)  // or use a shorter time window like -1d, depending on your need\n  |> filter(fn: (r) => r._measurement == \"acceptedMach\")\n  |> filter(fn: (r) => r._field == \"duration\" or r._field == \"machine\")\n  |> pivot(rowKey:[\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "ipb",
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "4ff9f9f7e1f0896a"
+            ]
+        ]
+    },
+    {
+        "id": "94afbf72fcaec60c",
+        "type": "inject",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 520,
+        "wires": [
+            [
+                "37e13652f23a8f44"
+            ]
+        ]
+    },
+    {
+        "id": "ec854cdc2b3c7d25",
+        "type": "debug",
+        "z": "986e9c0cdfc31cfe",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c35fa32301f38469",
+        "type": "function",
+        "z": "986e9c0cdfc31cfe",
+        "name": "M4",
+        "func": "// msg.payload: array of InfluxDB points like [{machine: \"M1\", _value: 146447}, ...]\n\nlet m1Durations = [];\n\nmsg.payload.forEach(point => {\n    const machine = point.machine || (point.tags && point.tags.machine);\n    const duration = point._value || point.duration;\n\n    if (machine === \"M4\" && typeof duration === 'number') {\n        m1Durations.push(duration);\n    }\n});\n\nfunction average(arr) {\n    if (arr.length === 0) return 0;\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nfunction stdDev(arr) {\n    if (arr.length === 0) return 0;\n    const avg = average(arr);\n    const squareDiffs = arr.map(value => Math.pow(value - avg, 2));\n    const avgSquareDiff = average(squareDiffs);\n    return Math.sqrt(avgSquareDiff);\n}\n\n// Calculate average and stddev in seconds\nconst avgSec = (average(m1Durations) / 1000).toFixed(2);\nconst stdDevSec = (stdDev(m1Durations) / 1000).toFixed(2);\n\n// Output formatted string\nmsg.payload = `Avg: ${avgSec} s, StdDev: ${stdDevSec} s`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 600,
+        "wires": [
+            [
+                "d7df9284d8dd548f",
+                "4855f727e9031c24"
+            ]
+        ]
+    },
+    {
+        "id": "d7df9284d8dd548f",
+        "type": "ui_text",
+        "z": "986e9c0cdfc31cfe",
+        "group": "7f50dc10253bfa89",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 690,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ecb170525d022abd",
+        "type": "influxdb in",
+        "z": "986e9c0cdfc31cfe",
+        "influxdb": "influx-config",
+        "name": "",
+        "query": "from(bucket: \"forklift\")\n  |> range(start: -1d)  // or use a shorter time window like -1d, depending on your need\n  |> filter(fn: (r) => r._measurement == \"acceptedMach\")\n  |> filter(fn: (r) => r._field == \"duration\" or r._field == \"machine\")\n  |> pivot(rowKey:[\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "ipb",
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "c35fa32301f38469"
+            ]
+        ]
+    },
+    {
+        "id": "0569a2a724033ca8",
+        "type": "inject",
+        "z": "986e9c0cdfc31cfe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 660,
+        "wires": [
+            [
+                "ecb170525d022abd"
+            ]
+        ]
+    },
+    {
+        "id": "4855f727e9031c24",
+        "type": "debug",
+        "z": "986e9c0cdfc31cfe",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 680,
+        "wires": []
+    }
+]
