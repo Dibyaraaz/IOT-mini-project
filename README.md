@@ -1,6 +1,6 @@
-# IOT-mini-project
+# IOT-Final-project
 Automatic Pallet Transport Request System
-# IoT Mini-Project – Automatic Pallet Transport Request by Forklifts
+# IoT Project – Automatic Pallet Transport Request by Forklifts
 
 This project is an IoT-based system designed to automate pallet transport requests from machines to forklifts using MQTT and Node-RED. It simulates a smart warehouse environment with machine clients and a forklift dashboard.
 
@@ -42,8 +42,7 @@ This project is an IoT-based system designed to automate pallet transport reques
 
 ## 👤 Author
 
-**Dibya Raj Khatri**  
-📍 Oslo, Norway  
+**Dibya Raj Khatri**   
 📧 raj.dibya789@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/dibyaraaz) 
 
